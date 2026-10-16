@@ -1,21 +1,23 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
   experimental: {
     agentFeedback: true,
-      images: {
+  },
+
+  images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**',
-        
+        protocol: "https",
+        hostname: "ichef.bbci.co.uk",
       },
     ],
   },
-  },
+
   cacheComponents: true,
   partialPrefetching: true,
   reactCompiler: true,
+
   turbopack: {
     rules: {
       "*.css": {
