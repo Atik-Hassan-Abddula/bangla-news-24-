@@ -1,5 +1,4 @@
 
-
 import Fotter from "@/components/Fotter";
 import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
@@ -19,6 +18,9 @@ const notosherifbangla = Noto_Serif_Bengali({
 export const metadata = {
   title: "Bangla News 24",
   description: "সর্বশেষ বাংলা সংবাদ ও ব্রেকিং নিউজ",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -30,15 +32,16 @@ export default function RootLayout({ children }) {
     >
       <body className="flex min-h-full flex-col">
         <HeadePage />
-          {/* <Navlinks></Navlinks> */}
+
+        {/* <Navlinks /> */}
+
         <Marquee />
-        
 
         <main className="w-full flex-1">
           {children}
-          
         </main>
-        <Fotter></Fotter>
+
+        <Fotter />
 
         <ToastContainer
           position="top-right"
