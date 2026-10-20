@@ -1,18 +1,18 @@
+
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const NewsCard = ({ news }) => {
-//   console.log(news);
-
   return (
-    <div>
+    <Link href={`/news/${news.id}`}>
       <div className="group h-full overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
         <figure className="overflow-hidden">
           <Image
             src={news.imageUrl}
             height={600}
             width={600}
-            alt=""
+            alt={news.title || "News image"}
             className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </figure>
@@ -33,7 +33,7 @@ const NewsCard = ({ news }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
