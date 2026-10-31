@@ -94,7 +94,7 @@ const SignInPage = () => {
   };
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#080d19] px-4 py-12">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#080d19] px-4 py-12">
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -300,7 +300,7 @@ const SignInPage = () => {
           </p>
         </section>
       </div>
-    </main>
+    </div>
   );
 };
 

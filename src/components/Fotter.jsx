@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const categories = [
-  { bn: "জাতীয়", en: "National", href: "/category/national" },
   { bn: "রাজনীতি", en: "Politics", href: "/category/politics" },
   { bn: "বিশ্ব", en: "World", href: "/category/world" },
   { bn: "অর্থনীতি", en: "Economy", href: "/category/economy" },
+  { bn: "স্বাস্থ্য", en: "Health", href: "/category/health" },
   { bn: "খেলাধুলা", en: "Sports", href: "/category/sports" },
   { bn: "প্রযুক্তি", en: "Technology", href: "/category/technology" },
 ];

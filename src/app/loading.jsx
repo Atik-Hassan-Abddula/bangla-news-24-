@@ -1,7 +1,7 @@
 
 export default function Loading() {
   return (
-    <main className="flex min-h-[70vh] flex-col items-center justify-center bg-white px-4">
+    <div className="flex min-h-[70vh] flex-col items-center justify-center bg-white px-4">
       {/* Logo */}
       <div className="mb-8 flex items-center gap-2">
         <span className="rounded-lg bg-red-600 px-3 py-2 text-2xl font-black text-white">
@@ -36,6 +36,6 @@ export default function Loading() {
       <p className="mt-4 text-xs font-semibold tracking-[0.2em] text-gray-400">
         PLEASE WAIT
       </p>
-    </main>
+    </div>
   );
 }

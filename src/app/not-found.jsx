@@ -4,7 +4,7 @@ import React from "react";
 
 const NotFoundPage = () => {
   return (
-    <main className="flex min-h-[80vh] items-center justify-center bg-gray-50 px-4">
+    <div className="flex min-h-[80vh] items-center justify-center bg-gray-50 px-4">
       <div className="w-full max-w-lg text-center">
         <h1 className="text-8xl font-extrabold tracking-tight text-red-600 sm:text-9xl">
           404
@@ -28,7 +28,7 @@ const NotFoundPage = () => {
           ← Back to Home
         </Link>
       </div>
-    </main>
+    </div>
   );
 };
 

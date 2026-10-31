@@ -1,41 +1,44 @@
-
 import Link from "next/link";
-import React from "react";
+import MobileNav from "@/components/MobileNav";
+import { fetchNewsApi } from "@/lib/news";
 
 const Navlinks = async () => {
-  const resolve = await fetch(
-    "https://news-api-v2.vercel.app/api/categories",
-    {
-      next: { revalidate: 60 },
-    }
+  const data = await fetchNewsApi("/api/categories");
+  const nav = Array.isArray(data?.data) ? data.data : [];
+  const navfilter = nav.filter(
+    (item) => item?.scrapable && item.slug && item.title
   );
 
-  if (!resolve.ok) {
-    throw new Error("Failed to fetch categories");
-  }
-
-  const data = await resolve.json();
-  const nav = data.data ?? [];
-  const navfilter = nav.filter(n=> n.scrapable)
+  const links = navfilter.map((item) => ({
+    href: `/category/${item.slug}`,
+    label: item.title,
+  }));
 
   return (
-    <div className="flex flex-wrap justify-center items-center gap-6">
-      <Link
-        href="/"
-        className="font-semibold hover:text-red-600"
+    <div className="mx-auto flex w-full max-w-7xl items-center justify-end px-4 pb-3 md:justify-center md:pb-4">
+      <nav
+        aria-label="প্রধান নেভিগেশন"
+        className="hidden flex-wrap items-center justify-center gap-5 md:flex lg:gap-6"
       >
-        হোম
-      </Link>
-
-      {navfilter.map((n) => (
         <Link
-          href={`/category/${n.slug}`}
-          key={n.slug}
-          className="font-medium text-gray-700 transition hover:text-red-600"
+          href="/"
+          className="font-semibold transition hover:text-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
         >
-          {n.title}
+          হোম
         </Link>
-      ))}
+
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="font-medium text-gray-700 transition hover:text-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
+
+      <MobileNav links={links} />
     </div>
   );
 };

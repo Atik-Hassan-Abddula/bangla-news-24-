@@ -28,7 +28,7 @@ const SignUpPage = () => {
     setLoading(true);
 
     try {
-      const { data: resData, error } = await signUp.email({
+      const { error } = await signUp.email({
         name: data.name,
         email: data.email,
         password: data.password,
@@ -40,7 +40,6 @@ const SignUpPage = () => {
       }
 
       toast.success("Account created successfully!");
-      console.log(resData, error);
     } catch (error) {
       toast.error(error.message || "Something went wrong!");
     } finally {
@@ -49,7 +48,7 @@ const SignUpPage = () => {
   };
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#080d19] px-4 py-12">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#080d19] px-4 py-12">
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -231,7 +230,7 @@ const SignUpPage = () => {
           </p>
         </section>
       </div>
-    </main>
+    </div>
   );
 };
 

@@ -46,7 +46,7 @@ export default function HeaderAuth() {
           type="button"
           onClick={handleSignOut}
           disabled={loading}
-          className="rounded-lg bg-red-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-red-700 disabled:opacity-50 sm:px-5"
+          className="whitespace-nowrap rounded-lg bg-red-600 px-2.5 py-2 text-xs font-semibold text-white transition hover:bg-red-700 disabled:opacity-50 sm:px-5 sm:text-sm"
         >
           {loading ? "সাইন আউট হচ্ছে..." : "সাইন আউট"}
         </button>
@@ -54,14 +54,14 @@ export default function HeaderAuth() {
         <>
           <Link
             href="/sign-in"
-            className="rounded-lg border border-red-600 px-3 py-2 text-sm font-semibold text-red-600 transition hover:bg-red-600 hover:text-white sm:px-5"
+            className="whitespace-nowrap rounded-lg border border-red-600 px-2.5 py-2 text-xs font-semibold text-red-600 transition hover:bg-red-600 hover:text-white sm:px-5 sm:text-sm"
           >
             সাইন ইন
           </Link>
 
           <Link
             href="/sign-up"
-            className="rounded-lg bg-red-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-red-700 sm:px-5"
+            className="whitespace-nowrap rounded-lg bg-red-600 px-2.5 py-2 text-xs font-semibold text-white transition hover:bg-red-700 sm:px-5 sm:text-sm"
           >
             সাইন আপ
           </Link>
