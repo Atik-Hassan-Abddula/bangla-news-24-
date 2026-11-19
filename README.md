@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📰 Bangla News 24
 
-## Getting Started
+### Your Daily Source of Bangla News & Updates
 
-First, run the development server:
+\<p align="center">
+&#x20; A modern news platform built to make discovering and reading news simple, fast, and accessible.
+\</p>
+
+\<p align="center">
+&#x20; \<a href="[https://bangla-news-24-rho-six.vercel.app/](https://bangla-news-24-rho-six.vercel.app/)">🌐 Live Website\</a>
+\</p>
+
+---
+
+## ✨ About The Project
+
+**Bangla News 24** is a modern online news platform designed to help readers explore news articles, discover different categories, and stay informed.
+
+The project focuses on a clean interface, organized news browsing, and a smooth user experience.
+
+## 🚀 Key Features
+
+- 🗞️ **News Discovery** — Explore news articles.
+- 📂 **Category Browsing** — Find news by category.
+- 📖 **News Details** — Read individual news articles.
+- 🔐 **Authentication** — Sign up and sign in.
+- 📱 **Responsive Design** — Access the platform across devices.
+- ℹ️ **Information Pages** — About, Contact, Privacy Policy, and Terms.
+
+## 🛠️ Built With
+
+| Technology     | Purpose         |
+| -------------- | --------------- |
+| Next.js 16     | React Framework |
+| React 19       | User Interface  |
+| HeroUI         | UI Components   |
+| Tailwind CSS 4 | Styling         |
+| DaisyUI        | UI Components   |
+| MongoDB        | Database        |
+| Better Auth    | Authentication  |
+| React Toastify | Notifications   |
+
+## 📂 Project Architecture
+
+```text
+bangla-news-24/
+│
+├── public/
+│
+└── src/
+    ├── app/
+    │   ├── about/
+    │   ├── api/
+    │   ├── category/[categoryId]/
+    │   ├── contact/
+    │   ├── news/[newsId]/
+    │   ├── privacy-policy/
+    │   ├── sign-in/
+    │   ├── sign-up/
+    │   └── terms/
+    │
+    ├── components/
+    └── lib/
+```
+
+## ⚡ Run Locally
+
+**1. Clone the repository**
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+**2. Navigate to the project**
+
+```bash
+cd bangla-news-24
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Start the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📜 Available Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # Development
+npm run build    # Production build
+npm run start    # Production server
+npm run lint     # ESLint check
+```
 
-## Learn More
+## 🌍 Live Preview
 
-To learn more about Next.js, take a look at the following resources:
+Explore the project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👉 [https://bangla-news-24-rho-six.vercel.app/](https://bangla-news-24-rho-six.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 👨‍💻 Developer
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Atik Hasan**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Computer Engineering Student | Aspiring Full-Stack Web Developer*
+
+---
+
+\<p align="center">   💙 Built with passion for the web. \</p>
